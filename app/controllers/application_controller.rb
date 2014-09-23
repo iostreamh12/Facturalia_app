@@ -34,7 +34,7 @@ class ApplicationController < ActionController::Base
       sign_out current_user
       user_session = nil
       current_user = nil
-      flash[:alert] = "Your account is locked."
+      flash[:alert] = "Su cuenta ha sido bloqueada."
       flash[:notice] = nil
       redirect_to root_url
     end

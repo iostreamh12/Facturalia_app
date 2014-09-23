@@ -1,5 +1,7 @@
 class Admin::UsersController < Admin::BaseController
   before_action :set_user, only: [
+    :new,
+    :create,
     :show,
     :edit,
     :update,
@@ -9,6 +11,19 @@ class Admin::UsersController < Admin::BaseController
 
   def index
     @users = User.search_and_order(params[:search], params[:page])
+  end
+  def new
+    @user = User.new
+  end
+  def create
+    @user = User.new(user_params)    # Not the final implementation!
+    if @user.save
+      sign_in @user
+      flash[:success] = "Bienvenido a FACTURALIA!"
+      redirect_to @user
+    else
+      render 'new'
+    end
   end
   
   def show
@@ -37,7 +52,7 @@ class Admin::UsersController < Admin::BaseController
       @user.save
       redirect_to admin_users_path, notice: "#{@user.email} updated."
     else
-      flash[:alert] = "#{old_email} couldn't be updated."
+      flash[:alert] = "#{old_email} No se actualizó."
       render :edit
     end
   end
@@ -48,7 +63,7 @@ class Admin::UsersController < Admin::BaseController
   def set_user
     @user = User.find(params[:id])
   rescue
-    flash[:alert] = "The user with an id of #{params[:id]} doesn't exist."
+    flash[:alert] = "ID de usuario #{params[:id]} no existe."
     redirect_to admin_users_path
   end
   
