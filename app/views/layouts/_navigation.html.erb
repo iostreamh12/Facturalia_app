@@ -1,5 +1,6 @@
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse navbar-fixed-top" style="background: rgba(1, 1, 1, 0.7)">
   <div class="container">
+  <%= link_to "F@cturalia", root_path, id: "logo" %>
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
         <span class="sr-only">Toggle navigation</span>
@@ -8,11 +9,29 @@
         <span class="icon-bar"></span>
       </button>
       <%= link_to 'Home', root_path, class: 'navbar-brand' %>
+      <%= link_to 'Nosotros', "", class: 'navbar-brand' %>
+      <%= link_to 'Contacto', "", class: 'navbar-brand' %> 
     </div>
-    <div class="collapse navbar-collapse">
+
       <ul class="nav navbar-nav">
+	      <li class="dropdown">
+	        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Servicios <b class="caret"></b></a>
+	        <ul class="dropdown-menu">
+	          <li><a href="#">Facturacion electronica</a></li>
+	          <li><a href="#">Recibos de Nómina</a></li>
+	          <li><a href="#">CFDI</a></li>
+	          <li><a href="#">Almacenaje</a></li>
+	          <li><a href="#">Declaraciones Anuales</a></li>
+	        </ul>
+	      </li>
+     </ul>
+
+    <div class="collapse navbar-collapse">
+      <ul class="nav pull-right">
         <%= render 'layouts/navigation_links' %>
       </ul>
     </div>
   </div>
 </nav>
+
+
