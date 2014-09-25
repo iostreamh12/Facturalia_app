@@ -3,26 +3,26 @@
 en:
   devise:
     confirmations:
-      confirmed: "Your account was successfully confirmed."
+      confirmed: "Su cuenta ha sido confirmada."
       send_instructions: "You will receive an email with instructions about how to confirm your account in a few minutes."
       send_paranoid_instructions: "If your email address exists in our database, you will receive an email with instructions about how to confirm your account in a few minutes."
     failure:
       already_authenticated: "You are already signed in."
       inactive: "Your account is not activated yet."
-      invalid: "Invalid email or password."
-      locked: "Your account is locked."
+      invalid: "E-mail o Password incorrectos."
+      locked: "Su cuenta ha sido bloqueada."
       last_attempt: "You have one more attempt before your account will be locked."
-      not_found_in_database: "Invalid email or password."
+      not_found_in_database: "Email o Password incorrecto."
       timeout: "Your session expired. Please sign in again to continue."
       unauthenticated: "You need to sign in or sign up before continuing."
-      unconfirmed: "You have to confirm your account before continuing."
+      unconfirmed: "Necesita confirmar su cuenta para continuar."
     mailer:
       confirmation_instructions:
-        subject: "Confirmation instructions"
+        subject: "Instrucciones de confimacion-Facturalia"
       reset_password_instructions:
-        subject: "Reset password instructions"
+        subject: "Instruccines para reestablecer password"
       unlock_instructions:
-        subject: "Unlock Instructions"
+        subject: "Instrucciones de desbloqueo"
     omniauth_callbacks:
       failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
       success: "Successfully authenticated from %{kind} account."
@@ -30,8 +30,8 @@ en:
       no_token: "You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided."
       send_instructions: "You will receive an email with instructions about how to reset your password in a few minutes."
       send_paranoid_instructions: "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes."
-      updated: "Your password was changed successfully. You are now signed in."
-      updated_not_active: "Your password was changed successfully."
+      updated: "Su password ha sido cambiado exitosamente. Ahora puede ingresar al sistema."
+      updated_not_active: "Su password ha sido cambiado."
     registrations:
       destroyed: "Bye! Your account was successfully cancelled. We hope to see you again soon."
       signed_up: "Welcome! You have signed up successfully."
@@ -41,10 +41,10 @@ en:
       update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and click on the confirm link to finalize confirming your new email address."
       updated: "You updated your account successfully."
     sessions:
-      signed_in: "Bienvenidoa Facturalia."
+      signed_in: "Bienvenido a Facturalia."
       signed_out: "Has salido."
     unlocks:
-      send_instructions: "You will receive an email with instructions about how to unlock your account in a few minutes."
+      send_instructions: "Usted recibira un correo sobre como desbloquear su cuenta en pocos minutos."
       send_paranoid_instructions: "If your account exists, you will receive an email with instructions about how to unlock it in a few minutes."
       unlocked: "Your account has been unlocked successfully. Please sign in to continue."
   errors:

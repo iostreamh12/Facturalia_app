@@ -15,16 +15,7 @@ class Admin::UsersController < Admin::BaseController
   def new
     @user = User.new
   end
-  def create
-    @user = User.new(user_params)    # Not the final implementation!
-    if @user.save
-      sign_in @user
-      flash[:success] = "Bienvenido a FACTURALIA!"
-      redirect_to @user
-    else
-      render 'new'
-    end
-  end
+
   
   def show
     redirect_to edit_admin_user_path(params[:id])
@@ -37,7 +28,7 @@ class Admin::UsersController < Admin::BaseController
     old_email = @user.email
     new_params = user_params.dup
     new_params[:email] = new_params[:email].strip
-    
+    @user.name = new_params[:name]
     @user.email = new_params[:email]
     @user.password = new_params[:password] if new_params[:password].strip.length > 0
     @user.password_confirmation = new_params[:password_confirmation] if new_params[:password_confirmation].strip.length > 0
@@ -66,9 +57,14 @@ class Admin::UsersController < Admin::BaseController
     flash[:alert] = "ID de usuario #{params[:id]} no existe."
     redirect_to admin_users_path
   end
+   def destroy
+    sign_out
+    redirect_to new_user_session_path
+  end
   
   def user_params
     params.require(:user).permit(
+    :name,
     :email,
     :password,
     :password_confirmation,
