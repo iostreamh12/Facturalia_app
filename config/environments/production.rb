@@ -80,7 +80,7 @@ Facturas::Application.configure do
   
   # Mailer
   config.action_mailer.raise_delivery_errors = false
-  config.action_mailer.default_url_options = { :host => 'evening-refuge_9050.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'evening-dusk-4191.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address: ENV["SMTP_SERVER"],
