@@ -83,13 +83,13 @@ Facturas::Application.configure do
   config.action_mailer.default_url_options = { :host => 'evening-dusk-4191.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address: ENV["SMTP_SERVER"],
+    address: 'smtp.gmail.com',
     openssl_verify_mode: OpenSSL::SSL::VERIFY_NONE,
-    port: ENV["SMTP_PORT"],
-    domain: ENV["MAILER_DOMAIN"],
+    port: 25,
+    domain: 'gmail.com',
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: ENV["SMTP_USER"],
-    password: ENV["SMTP_PWD"]
+    user_name: 'factu.soporte12',
+    password: 'emsa123$'
   }
 end
