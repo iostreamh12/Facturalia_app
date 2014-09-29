@@ -5,7 +5,7 @@ class Admin::UsersController < Admin::BaseController
     :show,
     :edit,
     :update,
-    :destroy
+    :destroy,
   ]
   
 
@@ -41,13 +41,17 @@ class Admin::UsersController < Admin::BaseController
     if @user.valid?
       @user.skip_reconfirmation!
       @user.save
-      redirect_to admin_users_path, notice: "#{@user.email} updated."
+      redirect_to admin_users_path, notice: "#{@user.email} actualizado."
     else
       flash[:alert] = "#{old_email} No se actualizó."
       render :edit
     end
   end
-  
+ 
+  def destroy
+    User.find(params[:id]).destroy
+    redirect_to admin_users_path, notice: "#{@user.email} borrado."
+  end 
   
   private 
   
@@ -56,10 +60,6 @@ class Admin::UsersController < Admin::BaseController
   rescue
     flash[:alert] = "ID de usuario #{params[:id]} no existe."
     redirect_to admin_users_path
-  end
-   def destroy
-    sign_out
-    redirect_to new_user_session_path
   end
   
   def user_params

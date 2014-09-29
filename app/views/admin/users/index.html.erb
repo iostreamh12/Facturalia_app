@@ -41,6 +41,7 @@
     <td>never</td>
     <% end %>
     <td><%= user.last_sign_in_ip %></td>
+    <td><%= link_to "Borrar", admin_user_path(user), method: :delete, data: { confirm: "Realmente desea borrar este usuario??"} %></td>
   </tr>
   
   <% end %>
