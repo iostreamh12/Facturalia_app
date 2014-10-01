@@ -1,3 +1,32 @@
-<h1>Protected Page</h1>
-<p>This page is only visible to signed in users. Edit it at: <em>views/pages/inside</em></p>
-<p>You can change the page users see after successfully signing in within the method <em>after_sign_in_path_for</em> inside <strong>application_controller.rb</strong></p>
+<h1 style="color:green;">Facturación<small>  Inicio</small></h1>
+<hr></hr>
+<div class="row">
+  <div class="col-sm-4">
+    <h3>Categorías</h3>
+    <h4><%= link_to "Facturas", "#" %> <small>- Administrar</small></h4>
+    <h4><%= link_to "Historial", "#" %> <small>- Archivo</small></h4>
+    <h4><%= link_to "Clientes", "#" %> <small>- Administrar</small></h4>
+    <hr/>
+  </div>
+  
+  <div class="col-sm-4">
+    <h3>Ultimas facturas</h3>
+    <ul class="list-unstyled">
+      <li class="list-padded-bottom">
+        <%= link_to "Factura_153322", "" %><br/>
+        <small>---- ago</small>
+      </li>
+    </ul>
+  </div>
+  
+  <div class="col-sm-4">
+    <h3>Clientes</h3>
+    <ul class="list-unstyled">
+      <li class="list-padded-bottom">
+        <%= link_to "Cliente_1052001", "" %><br/>
+        <small>---- ago</small>
+      </li>
+    </ul>
+  </div>
+  
+</div>

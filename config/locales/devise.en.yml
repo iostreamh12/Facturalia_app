@@ -20,7 +20,7 @@ en:
       confirmation_instructions:
         subject: "Instrucciones de confimacion-Facturalia"
       reset_password_instructions:
-        subject: "Instruccines para reestablecer password"
+        subject: "Instrucciones para reestablecer password"
       unlock_instructions:
         subject: "Instrucciones de desbloqueo"
     omniauth_callbacks:
@@ -42,7 +42,7 @@ en:
       updated: "You updated your account successfully."
     sessions:
       signed_in: "Bienvenido a Facturalia!!"
-      signed_out: "Has salido del sistema, pero puedes seguir navegando en nuestro sitio"
+      signed_out: "Has cerrado sesión correctamente, pero puedes seguir navegando en nuestro sitio"
     unlocks:
       send_instructions: "Usted recibira un correo sobre como desbloquear su cuenta en pocos minutos."
       send_paranoid_instructions: "If your account exists, you will receive an email with instructions about how to unlock it in a few minutes."
